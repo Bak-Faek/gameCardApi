@@ -1,1 +1,5 @@
 # gameCardApi
+
+Patrick
+Mohamad
+Hamed
