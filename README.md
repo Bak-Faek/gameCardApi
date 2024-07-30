@@ -1,5 +1,3 @@
-# gameCardApi
-
-Patrick
-Mohamad
+Patrick 
+Mohamad 
 Hamed
