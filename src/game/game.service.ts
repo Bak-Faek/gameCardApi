@@ -20,6 +20,11 @@ export class GameService {
     });
   }
 
+  async modifyGame(id: number, game: Partial<Game>): Promise<Game> {
+    await this.gamesRepository.update(id, game);
+    return this.gamesRepository.findOne({ where: [{ id: id }] });
+  }
+
   saveGame(game: Game): Promise<Game> {
     return this.gamesRepository.save(game);
   }

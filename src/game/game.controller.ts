@@ -30,9 +30,9 @@ export class GameController {
     return this.service.saveGame(game);
   }
 
-  @Put()
-  update(@Body() game: Game) {
-    return this.service.saveGame(game);
+  @Put(':id')
+  async update(@Param('id') id: number, @Body() game: Game): Promise<any> {
+    return this.service.modifyGame(+id, game);
   }
 
   @Delete(':id')
