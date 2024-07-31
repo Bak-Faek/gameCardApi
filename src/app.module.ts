@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { databaseConfig } from './config/database.config';
+import { UsersModule } from './user/user.module';
 import { GameModule } from './game/game.module';
 
 @Module({
@@ -13,6 +14,7 @@ import { GameModule } from './game/game.module';
       imports: [ConfigModule],
       useFactory: () => databaseConfig,
     }),
+    UsersModule,
     GameModule,
   ],
   controllers: [AppController],
