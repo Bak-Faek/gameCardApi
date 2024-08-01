@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { databaseConfig } from './config/database.config';
 import { UsersModule } from './user/user.module';
+import { GameModule } from './game/game.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { UsersModule } from './user/user.module';
       useFactory: () => databaseConfig,
     }),
     UsersModule,
+    GameModule,
   ],
   controllers: [AppController],
   providers: [AppService],
